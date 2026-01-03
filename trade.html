@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PayWithEmmy | Crypto Payments</title>
+
+<style>
+body {
+margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+background: #0b0f1a;
+color: #ffffff;
+}
+
+/* HEADER */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+background: #11162a;
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.brand img {
+width: 40px;
+height: 40px;
+object-fit: contain;
+}
+
+.brand h1 {
+color: #00ffa3;
+margin: 0;
+}
+
+nav a {
+color: #ffffff;
+margin-left: 20px;
+text-decoration: none;
+font-weight: bold;
+}
+
+nav a:hover {
+color: #00ffa3;
+}
+
+/* HERO */
+.hero {
+text-align: center;
+padding: 80px 20px;
+}
+
+.hero h2 {
+font-size: 40px;
+}
+
+.hero span {
+color: #00ffa3;
+}
+
+.hero p {
+max-width: 600px;
+margin: auto;
+color: #cfcfcf;
+}
+
+/* FEATURES */
+.features {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+padding: 60px 40px;
+background: #0f1426;
+}
+
+.feature {
+background: #161c35;
+padding: 25px;
+border-radius: 15px;
+text-align: center;
+}
+
+.feature h3 {
+color: #00ffa3;
+}
+
+/* CALCULATOR */
+.calculator {
+padding: 60px 20px;
+text-align: center;
+}
+
+.calc-box {
+max-width: 400px;
+margin: auto;
+background: #161c35;
+padding: 30px;
+border-radius: 15px;
+}
+
+.calc-box input {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border-radius: 8px;
+border: none;
+}
+
+.calc-box button {
+width: 100%;
+padding: 12px;
+margin-top: 10px;
+border-radius: 20px;
+border: none;
+font-weight: bold;
+cursor: pointer;
+}
+
+.calc-btn {
+background: #00ffa3;
+color: #000;
+}
+
+.reset-btn {
+background: #333;
+color: #fff;
+}
+
+.result {
+margin-top: 15px;
+font-size: 20px;
+color: #00ffa3;
+}
+
+/* CONTACT */
+.contact {
+text-align: center;
+padding: 60px 20px;
+}
+
+.contact a {
+color: #00ffa3;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+text-align: center;
+padding: 20px;
+background: #11162a;
+color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="brand">
+<img src="../crypto.png" alt="safe trades">
+<h1>PayWithEmmy</h1>
+</div>
+<nav>
+<a href="https://x.com/whyemmyy/status/2005885589661405684?s=20" target="_blank">Home</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Fast & Secure Crypto Payments with <span>paywithemmy</span></h2>
+<p>
+Send, receive, and manage your cryptocurrency easily.
+Simple. Secure. Global. Good rates. Active 24/7
+</p>
+</section>
+
+<section class="features">
+<div class="feature">
+<h3><em>Secure Wallet</em></h3>
+<p>Advanced blockchain security for your funds.</p>
+</div>
+<div class="feature">
+<h3><em>Instant Transfers</em></h3>
+<p>Send crypto worldwide in seconds.</p>
+</div>
+<div class="feature">
+<h3><em>Multi-Currency</em></h3>
+<p>BTC, ETH, USDT and more.</p>
+</div>
+</section>
+
+<section class="calculator">
+<h2>Crypto Calculator</h2>
+<div class="calc-box">
+<input type="number" id="price" placeholder="Coin Price (₦ or $)">
+<input type="number" id="amount" placeholder="Coin Amount">
+<button class="calc-btn" onclick="calculate()">Calculate</button>
+<button class="reset-btn" onclick="resetCalc()">Reset</button>
+<div class="result" id="result"></div>
+</div>
+</section>
+
+<section class="contact">
+<h2>Contact PayWithEmmy</h2>
+<p>📞 <a href="tel:+2347057126928">+234 705 712 6928</a></p>
+<p>💬 <a href="https://t.co/0tf263gxwH" target="_blank">Chat on WhatsApp</a></p>
+<p>📧 <a href="mailto:paywithemmyy@gmail.com">paywithemmyy@gmail.com</a></p>
+</section>
+
+<footer>
+© 2025 PayWithEmmy • Crypto Payments Made Easy😉 <br>
+<em>We are only on whatsapp& X(twitter) for now..</em>
+</footer>
+
+<script>
+function calculate() {
+let price = document.getElementById("price").value;
+let amount = document.getElementById("amount").value;
+
+if (price === "" || amount === "") {
+document.getElementById("result").innerText = "Enter valid values";
+return;
+}
+
+document.getElementById("result").innerText =
+"Total Value: " + (price * amount);
+}
+
+function resetCalc() {
+document.getElementById("price").value = "";
+document.getElementById("amount").value = "";
+document.getElementById("result").innerText = "";
+}
+</script>
+
+</body>
+</html>
