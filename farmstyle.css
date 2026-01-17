@@ -1,0 +1,169 @@
+ * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Amaranth", sans-serif;
+            background-color: #f7f9f7;
+            color: #333;
+        }
+
+        /* Hero Header */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                        url("../day6/mamafarm.jpg") center/cover no-repeat;
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-style: italic;
+            color: #fff
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #2e7d32;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #c8e6c9;
+        }
+
+        /* Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 0;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #2e7d32;
+            margin-bottom: 10px;
+            font-size: 2.2rem;
+        }
+
+        .section-text {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #555;
+        }
+
+        /* Animal Cards */
+        .animals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .animal-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .animal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .animal-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .animal-content {
+            padding: 20px;
+        }
+
+        .animal-content h3 {
+            color: #1b5e20;
+            margin-bottom: 8px;
+        }
+
+        .animal-content p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Farmer Profile */
+        .farmer-profile {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            align-items: center;
+        }
+
+        .farmer-profile img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2e7d32;
+            justify-self: center;
+        }
+
+        .farmer-profile h3 {
+            color: #1b5e20;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .farmer-profile p {
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .farmer-profile {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+                }
+                }
